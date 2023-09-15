@@ -1,8 +1,8 @@
 /* styles.css */
 
 body {
-    background-color: #f5f5f5;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
@@ -14,8 +14,8 @@ body {
 .container {
     max-width: 800px;
     padding: 40px;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     text-align: center;
     position: relative;
@@ -24,24 +24,32 @@ body {
 .container::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, #007BFF, #00BFFF);
-    clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
-    z-index: -1;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 4px solid #007BFF;
+    border-radius: 10px;
 }
 
 h1 {
     font-size: 2.5rem;
     color: #333;
+    background-color: #007BFF;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    color: #fff;
 }
 
 p {
     font-size: 1.2rem;
     line-height: 1.6;
     color: #555;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
 a {
