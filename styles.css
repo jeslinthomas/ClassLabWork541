@@ -1,64 +1,114 @@
-/* styles.css */
+/* Flexbox Part 1 */
 
-body {
-    background-color: #f0f0f0;
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+#flex-section1 ul {
+
 }
 
-.container {
-    max-width: 800px;
-    padding: 40px;
-    background-color: #ffffff; /* Background color inside the text box */
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    text-align: center;
-    position: relative;
+/* end Flexbox Part 1 */
+
+
+/* Flexbox Part 2 */
+
+#flex-section2 ul {
+
 }
 
-.container::before {
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    background-color: #007BFF; /* Background color outside the text box */
-    border-radius: 10px;
-    z-index: -1;
+#flex-section2 li {
+
 }
 
-h1 {
-    font-size: 2.5rem;
-    color: #333;
-    background-color: #007BFF;
-    padding: 10px 0;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    color: #fff;
+#flex-section2 .item1 {
+
 }
 
-p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #555;
-    background-color: #f5f5f5;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+#flex-section2 .item2 {
+
 }
 
-a {
-    text-decoration: none;
-    color: #007BFF;
-    transition: color 0.3s ease-in-out;
+#flex-section2 .item3 {
+
 }
 
-a:hover {
-    color: #00BFFF;
+/* end Flexbox Part 2 */
+
+
+/* Flexbox Part 3 */
+
+#flex-section3 .box {
+
 }
+
+#flex-section3 .tags ul {
+
+}
+
+/* end Flexbox Part 3 */
+
+
+/* Grid Part 1 */
+
+#grid-section1 .grid {
+
+}
+
+/* end Grid Part 1 */
+
+
+/* Grid Part 2 */
+
+#grid-section2 .gridboxblue {
+
+}
+
+#grid-section2 .gridboxred {
+
+}
+
+/* end Grid Part 2 */
+
+
+/* Grid Part 3 */
+
+#grid-section3 .grid {
+
+}
+
+#grid-section3 .box1 {
+
+}
+
+#grid-section3 .box2 {
+
+}
+
+#grid-section3 .box3 {
+
+}
+
+#grid-section3 .box4 {
+
+}
+
+/* end Grid Part 3 */
+
+
+/* Transition Part */
+
+#transition-section .box a {
+	display: inline-block;
+	background-color: #ccc;
+	color: #000;
+	padding: 20px;
+	text-decoration: none;
+
+
+}
+
+#transition-section .box a:hover {
+	background-color: #cc0000;
+	color: #fff;
+
+
+}
+
+/* end Transition Part */
