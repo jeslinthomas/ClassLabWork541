@@ -1,17 +1,14 @@
 <div><br class="Apple-interchange-newline">/* Flexbox Part 1 */
 
 /* Flexbox Part 1 */
+
 #flex-section1 ul {
   display: flex;
-  justify-content: space-between;
-  list-style: none;
-  padding: 0;
+  justify-content: space-between; /* To evenly space the buttons */
 }
-#flex-section1 ul li {
-  flex: 1;
-  text-align: center;
-}
+
 /* end Flexbox Part 1 */
+
 
 /* Flexbox Part 2 */
 
@@ -37,7 +34,6 @@
 }
 
 /* end Flexbox Part 2 */
-
 
 
 /* Flexbox Part 3 */
