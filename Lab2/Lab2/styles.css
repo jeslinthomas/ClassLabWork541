@@ -1,23 +1,20 @@
-/* Flexbox Part 1 */ 
+<div><br class="Apple-interchange-newline">/* Flexbox Part 1 */
+
+/* Flexbox Part 1 */
 
 #flex-section1 ul {
-  display: flex;
-  justify-content: space-between;
-  padding: 0;
+  display: flex; /* Turn the container into a flex container */
+  justify-content: space-between; /* Distribute space evenly between items */
+  padding: 0; /* Remove default padding */
+  list-style: none; /* Remove default list styles */
 }
 
-#flex-section1 li {
-  list-style: none;
-  margin-right: 10px;
+#flex-section1 ul li {
+  flex-grow: 1; /* Allow items to grow and occupy equal space */
+  text-align: center; /* Center-align text within each button */
 }
 
-#flex-section1 .btn {
-  text-decoration: none;
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
-}
+/* end Flexbox Part 1 */
 
 /* end Flexbox Part 1 */
 
@@ -25,15 +22,23 @@
 /* Flexbox Part 2 */
 
 #flex-section2 ul {
-  display: flex;
-  padding: 0;
+
 }
 
 #flex-section2 li {
-  flex: 1;
-  background-color: #f0f0f0;
-  padding: 20px;
-  margin: 10px;
+
+}
+
+#flex-section2 .item1 {
+
+}
+
+#flex-section2 .item2 {
+
+}
+
+#flex-section2 .item3 {
+
 }
 
 /* end Flexbox Part 2 */
@@ -42,24 +47,11 @@
 /* Flexbox Part 3 */
 
 #flex-section3 .box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+
 }
 
 #flex-section3 .tags ul {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
 
-#flex-section3 .tags li {
-  background-color: #333;
-  color: #fff;
-  padding: 5px 10px;
-  margin: 5px;
-  border-radius: 5px;
 }
 
 /* end Flexbox Part 3 */
@@ -68,15 +60,7 @@
 /* Grid Part 1 */
 
 #grid-section1 .grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
-}
 
-#grid-section1 .greybox {
-  background-color: #f0f0f0;
-  padding: 20px;
-  text-align: center;
 }
 
 /* end Grid Part 1 */
@@ -85,23 +69,11 @@
 /* Grid Part 2 */
 
 #grid-section2 .gridboxblue {
-  grid-column: 1 / span 2;
-  grid-row: 1 / span 2;
-  background-color: #007acc;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-  position: relative;
-  z-index: 1;
+
 }
 
 #grid-section2 .gridboxred {
-  grid-column: 2 / span 2;
-  grid-row: 2 / span 2;
-  background-color: #ff4d4d;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
+
 }
 
 /* end Grid Part 2 */
@@ -110,28 +82,23 @@
 /* Grid Part 3 */
 
 #grid-section3 .grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 100px 300px 100px;
-  grid-gap: 10px;
+
 }
 
-#grid-section3 .box1,
-#grid-section3 .box3 {
-  background-color: #f0f0f0;
-  padding: 20px;
+#grid-section3 .box1 {
+
 }
 
 #grid-section3 .box2 {
-  background-color: #007acc;
-  color: #fff;
-  padding: 20px;
+
+}
+
+#grid-section3 .box3 {
+
 }
 
 #grid-section3 .box4 {
-  background-color: #ff4d4d;
-  color: #fff;
-  padding: 20px;
+
 }
 
 /* end Grid Part 3 */
@@ -140,18 +107,20 @@
 /* Transition Part */
 
 #transition-section .box a {
-  display: inline-block;
-  background-color: #ccc;
-  color: #000;
-  padding: 20px;
-  text-decoration: none;
-  transition: background-color 0.5s ease, color 0.5s ease;
+	display: inline-block;
+	background-color: #ccc;
+	color: #000;
+	padding: 20px;
+	text-decoration: none;
+
+
 }
 
 #transition-section .box a:hover {
-  background-color: #cc0000;
-  color: #fff;
-  transition: background-color 0.5s ease, color 0.5s ease;
+	background-color: #cc0000;
+	color: #fff;
+
+
 }
 
-/* end Transition Part */
+/* end Transition Part */</div>
