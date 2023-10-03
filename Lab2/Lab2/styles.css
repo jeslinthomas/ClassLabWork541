@@ -3,9 +3,25 @@
 /* Flexbox Part 1 */
 
 #flex-section1 ul {
-  display: flex;
-  justify-content: space-between; /* To evenly space the buttons */
-}
+	list-style-type: none;
+	margin-left: 20px;
+	margin-right: 20px;
+	padding: 0px 10px 0px 10px;
+	display: flex;
+	justify-content: space-between;
+  }
+  
+  #flex-section1 li {
+	
+  }
+  
+  #flex-section1 a.btn {
+	text-decoration: none;
+	padding: 8px 16px 8px 16px;; /* Adjust padding as needed */
+	background-color: #d31111; /* Background color for the buttons */
+	color: #fff; /* Text color for the buttons */
+	border-radius: 5px; /* Rounded corners for the buttons */
+  }
 
 /* end Flexbox Part 1 */
 
