@@ -86,13 +86,12 @@
 
 /* Grid Part 2 */
 #grid-section2 .gridboxblue {
-    grid-column: 2 / span 2;
-    grid-row: 1 / span 4;
-    background-color: #00008B; /* Dark blue background color */
-    border: 2px solid #00008B; /* Darker blue border */
-    opacity: 0.6;
-    z-index: 1;
-}
+	grid-column: 2 / span 2; /* Position the blue box in columns 2 and 3 */
+	grid-row: 1 / span 4;    /* Position the blue box in rows 1 and 3 */
+	background-color: rgb(29, 29, 153);  /* Set background color to blue */
+	opacity: 0.6;
+	z-index: 1;              /* Ensure the blue box is on top */
+  }
 
 
 
