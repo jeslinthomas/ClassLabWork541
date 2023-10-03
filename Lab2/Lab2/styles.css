@@ -3,6 +3,20 @@
 #flex-section1 ul {
   display: flex;
   justify-content: space-between;
+  padding: 0;
+}
+
+#flex-section1 li {
+  list-style: none;
+  margin-right: 10px;
+}
+
+#flex-section1 .btn {
+  text-decoration: none;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
 }
 
 /* end Flexbox Part 1 */
@@ -12,27 +26,14 @@
 
 #flex-section2 ul {
   display: flex;
-  justify-content: space-between;
+  padding: 0;
 }
 
 #flex-section2 li {
   flex: 1;
-  /* Add any additional styles for list items here if needed. */
-}
-
-#flex-section2 .item1 {
-  order: 1;
-  /* Add any additional styles for the first column here if needed. */
-}
-
-#flex-section2 .item2 {
-  order: 3;
-  /* Add any additional styles for the second column here if needed. */
-}
-
-#flex-section2 .item3 {
-  order: 2;
-  /* Add any additional styles for the third column here if needed. */
+  background-color: #f0f0f0;
+  padding: 20px;
+  margin: 10px;
 }
 
 /* end Flexbox Part 2 */
@@ -44,22 +45,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 #flex-section3 .tags ul {
   display: flex;
   flex-wrap: wrap;
-  /* Add any additional styles for the tags list here if needed. */
+  margin-top: 20px;
 }
 
 #flex-section3 .tags li {
-  background-color: #ddd;
-  color: #000;
-  padding: 3px;
-  border: 2px solid #555;
-  border-radius: 4px;
-  font-size: 0.75rem;
-  margin: 2px 5px;
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 5px;
 }
 
 /* end Flexbox Part 3 */
@@ -74,7 +74,9 @@
 }
 
 #grid-section1 .greybox {
-  /* Add any additional styles for grid boxes here if needed. */
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
 }
 
 /* end Grid Part 1 */
@@ -83,11 +85,23 @@
 /* Grid Part 2 */
 
 #grid-section2 .gridboxblue {
-  /* Add any additional styles for the blue box here if needed. */
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  background-color: #007acc;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
 }
 
 #grid-section2 .gridboxred {
-  /* Add any additional styles for the red box here if needed. */
+  grid-column: 2 / span 2;
+  grid-row: 2 / span 2;
+  background-color: #ff4d4d;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
 }
 
 /* end Grid Part 2 */
@@ -102,24 +116,22 @@
   grid-gap: 10px;
 }
 
-#grid-section3 .greybox.box1 {
-  grid-row: 1 / span 2;
-  /* Add any additional styles for the first box here if needed. */
+#grid-section3 .box1,
+#grid-section3 .box3 {
+  background-color: #f0f0f0;
+  padding: 20px;
 }
 
-#grid-section3 .greybox.box2 {
-  grid-row: 2 / span 1;
-  /* Add any additional styles for the second box here if needed. */
+#grid-section3 .box2 {
+  background-color: #007acc;
+  color: #fff;
+  padding: 20px;
 }
 
-#grid-section3 .greybox.box3 {
-  grid-row: 1 / span 3;
-  /* Add any additional styles for the third box here if needed. */
-}
-
-#grid-section3 .greybox.box4 {
-  grid-row: 3 / span 1;
-  /* Add any additional styles for the fourth box here if needed. */
+#grid-section3 .box4 {
+  background-color: #ff4d4d;
+  color: #fff;
+  padding: 20px;
 }
 
 /* end Grid Part 3 */
@@ -133,15 +145,13 @@
   color: #000;
   padding: 20px;
   text-decoration: none;
-  /* Add any additional styles for the link here if needed. */
-  transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 #transition-section .box a:hover {
   background-color: #cc0000;
   color: #fff;
-  /* Add any additional styles for the link on hover here if needed. */
-  transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 /* end Transition Part */
