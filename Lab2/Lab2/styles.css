@@ -48,27 +48,22 @@
 }
 
 /* Flexbox Part 3 */
+
 #flex-section3 .box {
-    display: flex;
-    flex-direction: column; /* Stack child elements vertically */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
+  display: flex;
+  align-items: center; /* To center vertically */
+  justify-content: center; /* To center horizontally */
 }
 
 #flex-section3 .tags ul {
-    display: flex;
-    flex-wrap: wrap; /* Allow tags to wrap when there's not enough space */
-    gap: 5px; /* Add some space between tags */
-    padding: 0px 5px;
-    list-style: none;
+  display: flex;
+  flex-wrap: wrap; /* To make the tags wrap to the next line */
+  list-style-type: none;
+  padding: 0;
 }
 
-#flex-section3 .tags li {
-    background-color: #dad6d6;
-    padding: 3px;
-    border-radius: 5px;
-    margin: 2px;
-}
+/* end Flexbox Part 3 */
+
 
 /* Grid Part 1 */
 #grid-section1 .grid {
