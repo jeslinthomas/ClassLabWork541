@@ -1,7 +1,32 @@
 /* Flexbox Part 1 */
 
 #flex-section1 ul {
+  display: flex; /* Make the <ul> a flex container */
+  justify-content: space-between; /* Distribute space evenly between items */
+  padding: 0; /* Remove default padding */
+  list-style: none; /* Remove default list bullets */
+}
 
+#flex-section1 li {
+  flex: 1; /* Distribute space evenly among list items */
+  margin: 0 5px; /* Add spacing between list items */
+}
+
+#flex-section1 .btn {
+  display: block; /* Make the buttons block-level elements */
+  text-align: center; /* Center text within buttons */
+  padding: 10px 15px; /* Add padding to buttons */
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  text-decoration: none; /* Remove underlines from links */
+  border: none; /* Remove button borders */
+  border-radius: 5px; /* Add button border radius */
+  transition: background-color 0.5s, color 0.5s; /* Add transition properties */
+}
+
+/* Hover state for buttons */
+#flex-section1 .btn:hover {
+  background-color: #0056b3; /* Button background color on hover */
 }
 
 /* end Flexbox Part 1 */
@@ -10,23 +35,30 @@
 /* Flexbox Part 2 */
 
 #flex-section2 ul {
-
+  display: flex; /* Make the <ul> a flex container */
+  justify-content: space-between; /* Distribute space evenly between items */
+  padding: 0; /* Remove default padding */
+  list-style: none; /* Remove default list bullets */
 }
 
 #flex-section2 li {
-
+  flex: 1; /* Distribute space evenly among list items */
 }
 
+/* Add styling to each list item */
 #flex-section2 .item1 {
-
+  background-color: #f2f2f2;
+  padding: 10px;
 }
 
 #flex-section2 .item2 {
-
+  background-color: #f2f2f2;
+  padding: 10px;
 }
 
 #flex-section2 .item3 {
-
+  background-color: #f2f2f2;
+  padding: 10px;
 }
 
 /* end Flexbox Part 2 */
@@ -35,11 +67,23 @@
 /* Flexbox Part 3 */
 
 #flex-section3 .box {
-
+  display: flex; /* Make the .box a flex container */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
 
 #flex-section3 .tags ul {
+  display: flex; /* Make the <ul> a flex container */
+  list-style: none; /* Remove default list bullets */
+  padding: 0; /* Remove default padding */
+}
 
+#flex-section3 .tags li {
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 5px;
 }
 
 /* end Flexbox Part 3 */
@@ -48,7 +92,14 @@
 /* Grid Part 1 */
 
 #grid-section1 .grid {
+  display: grid; /* Make the .grid a grid container */
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  grid-gap: 20px; /* Gap between columns and rows */
+}
 
+#grid-section1 .greybox {
+  background-color: #f2f2f2;
+  padding: 10px;
 }
 
 /* end Grid Part 1 */
@@ -56,12 +107,28 @@
 
 /* Grid Part 2 */
 
-#grid-section2 .gridboxblue {
+#grid-section2 .grid {
+  display: grid; /* Make the .grid a grid container */
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  grid-template-rows: repeat(3, auto); /* 3 auto rows */
+  grid-gap: 20px; /* Gap between columns and rows */
+}
 
+#grid-section2 .gridboxblue {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  grid-row: 1 / span 2; /* Position in the grid */
+  grid-column: 1 / span 2; /* Position in the grid */
+  z-index: 1; /* Bring the blue box to the front */
 }
 
 #grid-section2 .gridboxred {
-
+  background-color: #cc0000;
+  color: #fff;
+  padding: 10px;
+  grid-row: 2 / span 2; /* Position in the grid */
+  grid-column: 2 / span 2; /* Position in the grid */
 }
 
 /* end Grid Part 2 */
@@ -70,23 +137,36 @@
 /* Grid Part 3 */
 
 #grid-section3 .grid {
-
+  display: grid; /* Make the .grid a grid container */
+  grid-template-columns: 2fr 1fr; /* 2 columns with a 2:1 ratio */
+  grid-template-rows: 100px 300px 100px; /* Row heights */
+  grid-gap: 10px; /* Gap between columns and rows */
 }
 
-#grid-section3 .box1 {
+#grid-section3 .greybox {
+  background-color: #f2f2f2;
+  padding: 10px;
+}
 
+/* Add positioning to boxes in the grid */
+#grid-section3 .box1 {
+  grid-row: 1 / span 2;
+  grid-column: 1 / span 1;
 }
 
 #grid-section3 .box2 {
-
+  grid-row: 1 / span 2;
+  grid-column: 2 / span 1;
 }
 
 #grid-section3 .box3 {
-
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 2;
 }
 
 #grid-section3 .box4 {
-
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 2;
 }
 
 /* end Grid Part 3 */
@@ -95,20 +175,18 @@
 /* Transition Part */
 
 #transition-section .box a {
-	display: inline-block;
-	background-color: #ccc;
-	color: #000;
-	padding: 20px;
-	text-decoration: none;
-
-
+  display: inline-block;
+  background-color: #ccc;
+  color: #000;
+  padding: 20px;
+  text-decoration: none;
+  transition: background-color 0.5s, color 0.5s; /* Add transition properties */
 }
 
 #transition-section .box a:hover {
-	background-color: #cc0000;
-	color: #fff;
-
-
+  background-color: #cc0000;
+  color: #fff;
+  transition-duration: 0.5s; /* Hover transition duration */
 }
 
 /* end Transition Part */
