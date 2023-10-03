@@ -78,21 +78,20 @@
 
 
 /* Grid Part 2 */
+#grid-section2 .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
 #grid-section2 .gridboxblue {
-	grid-column: 2 / span 2; /* Position the blue box in columns 2 and 3 */
-	grid-row: 1 / span 4;    /* Position the blue box in rows 1 and 3 */
-	background-color: rgb(29, 29, 153); /* Darker blue background color */
-	opacity: 0.6;
-	z-index: 1;              /* Ensure the blue box is on top */
-  }
-
-
+  grid-column: 2 / 4;
+  grid-row: 1 / 4;
+  z-index: 2;
+}
 #grid-section2 .gridboxred {
-    grid-column: 1 / span 2; /* Position the red box in columns 1 and 2 */
-    grid-row: 2 / span 1;    /* Position the red box in rows 1 and 2 */
-    background-color: rgb(178, 45, 45);   /* Set background color to red */
-    opacity: 0.8;
-    z-index: 0;              /* Ensure the red box is below the blue box */
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+  z-index: 1
 }
 
 /* Grid Part 3 */
