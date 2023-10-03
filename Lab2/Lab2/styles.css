@@ -13,10 +13,10 @@
 
 #flex-section1 a.btn {
     text-decoration: none;
-    padding: 8px 16px; /* Adjust padding as needed */
-    background-color: #d31111; /* Background color for the buttons */
-    color: #fff; /* Text color for the buttons */
-    border-radius: 5px; /* Rounded corners for the buttons */
+    padding: 8px 14px; 
+    background-color: #d31111; 
+    color: #fff; 
+    border-radius: 5px; 
 }
 
 /* Flexbox Part 2 */
