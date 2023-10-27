@@ -7,12 +7,12 @@ html {
 }
 
 body {
-  border: 1px solid #ccc; /* Change the border color */
+  border: 1px solid lightgray;
   border-radius: 10px;
   height: 100vh;
   width: 400px;
   margin: 0 auto;
-  background-color: #ecf0f1; /* Change the background color to your preference */
+  background-color: #90ee90; /* Light Green - Change to your desired background color */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,7 +69,7 @@ section > div {
     height: 100vh;
     width: 300px;
     margin: 0 auto;
-    background-color: #ecf0f1; /* Change the background color to your preference */
+    background-color: #90ee90; /* Light Green - Change to your desired background color */
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -90,7 +90,7 @@ section > div {
     height: 100vh;
     width: 250px;
     margin: 0 auto;
-    background-color: #ecf0f1; /* Change the background color to your preference */
+    background-color: #90ee90; /* Light Green - Change to your desired background color */
     display: flex;
     flex-flow: column;
     align-items: center;
