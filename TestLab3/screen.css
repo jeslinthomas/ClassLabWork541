@@ -1,25 +1,25 @@
 html {
-  background: conic-gradient(at 125% 50%, #b78cf7, #ff7c94, #ffcf0d, #b78cf7);
-  color: black;
+  background: conic-gradient(at 125% 50%, #3498db, #e74c3c, #f1c40f, #9b59b6);
+  color: #333; /* Change the text color to your preference */
   font-family: Georgia, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
 }
 
 body {
-  border: 1px solid lightgray;
+  border: 1px solid #ccc; /* Change the border color */
   border-radius: 10px;
   height: 100vh;
   width: 400px;
   margin: 0 auto;
-  background-color: #f0f0f0; /* Change to your desired background color */
+  background-color: #ecf0f1; /* Change the background color to your preference */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 h1 {
-  font-size: 20px; /* Increase font size for better readability */
+  font-size: 20px;
   text-align: center;
 }
 
@@ -28,7 +28,7 @@ h2 {
 }
 
 section > div {
-  color: black;
+  color: #333; /* Change the text color to your preference */
   font-size: 18px;
   line-height: 24px;
   padding: 20px;
@@ -44,7 +44,7 @@ section > div {
   padding: 8px;
   outline: none;
   border-radius: 5px;
-  border: 1px solid lightgray;
+  border: 1px solid #ccc; /* Change the border color */
 }
 
 .space-between {
@@ -60,7 +60,8 @@ section > div {
 
 /* Accent Color for Buttons */
 .bill button {
-  color: #ff5733; /* Change to your desired accent color */
+  color: #fff; /* Change the text color of the button */
+  background-color: #3498db; /* Change the background color of the button */
 }
 
 @media (max-width: 450px) {
@@ -68,7 +69,7 @@ section > div {
     height: 100vh;
     width: 300px;
     margin: 0 auto;
-    background-color: #f0f0f0; /* Change to your desired background color */
+    background-color: #ecf0f1; /* Change the background color to your preference */
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -89,7 +90,7 @@ section > div {
     height: 100vh;
     width: 250px;
     margin: 0 auto;
-    background-color: #f0f0f0; /* Change to your desired background color */
+    background-color: #ecf0f1; /* Change the background color to your preference */
     display: flex;
     flex-flow: column;
     align-items: center;
