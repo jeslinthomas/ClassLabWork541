@@ -1,0 +1,106 @@
+
+
+html {
+  background: conic-gradient(at 125% 50%, #b78cf7, #ff7c94, #ffcf0d, #b78cf7);
+  color: black;
+  font-family: Georgia, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+body {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  height: 100vh;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 15px;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+section > div {
+  color: black;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 20px;
+}
+
+.bill {
+  padding-bottom: 10px;
+}
+
+.bill input {
+  font-family: Georgia, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: auto;
+  padding: 8px;
+  outline: none;
+  border-radius:5px;
+  border: 1px solid lightgray;
+}
+
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.range {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+  }
+
+
+@media(max-width:450px) {
+
+  body {
+    height: 100vh;
+    width: 300px;
+    margin: auto;
+    background-color: whitesmoke;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bill input {
+  width: 40%;
+}
+
+.bill button {
+  width: 10%;
+}
+
+@media(max-width:350px) {
+
+  body {
+    height: 100vh;
+    width: 250px;
+    margin: auto;
+    background-color: whitesmoke;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bill input {
+  width: 95%;
+}
+
+ .bill button {
+   width: 10%;
+}

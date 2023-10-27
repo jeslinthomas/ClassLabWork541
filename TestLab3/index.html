@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <title>Tip Calculator</title>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
+      <link rel="stylesheet" href="screen.css" >
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    </head>
+    <body>
+      <form id="oninput">
+        <h1>ITMD541 Lab3 Druva</h1>
+        <section>
+          <h2>Tip Calculator</h2>
+          <div class="bill">
+            <label for="yourBill"> Bill Amount</label>
+            <button><i class="fa-sharp fa-solid fa-dollar-sign"></i></button>
+            <input type="text" placeholder="Your Bill" id="yourBill">
+          </div>
+          <div>
+            <div class="space-between">
+              <label for="tipInput">Choose Tip</label>
+              <span id="tipPercent"></span>
+            </div>
+            <input type="range"
+            min="0"
+            max="100"
+            value = "0"
+            step="1"
+            id="tipInput"
+            class="range">
+          </div>
+          <div class="space-between">
+            <span> Tip </span>
+            <span id="tipValue"></span>
+          </div>
+          <hr>
+          <div class="space-between total">
+            <span> Total </span>
+            <span id="totalWithTip"></span>
+          </div>
+        </section>
+        <section>
+          <div>
+            <div class="space-between">
+              <label for="splitInput"> Split </label>
+              <span id="splitValue"></span>
+            </div>
+            <input type="range"
+            min="1"
+            max="10"
+            value = "1"
+            step="1"
+            id="splitInput"
+            class="range">
+          </div>
+          <div class="space-between">
+            <span> Bill Each </span>
+            <span id="billEach"></span>
+          </div>
+          <div class="space-between">
+            <span> Tip Each </span>
+            <span id="tipEach"></span>
+          </div>
+        </section>
+      </form>
+    </body>
+    <script src="main.js">
+    </script>
+    </html>
