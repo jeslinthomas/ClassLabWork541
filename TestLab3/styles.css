@@ -1,6 +1,6 @@
 html {
   background: conic-gradient(at 125% 50%, #1abc9c, #f39c12, #e67e22, #9b59b6);
-  color: #333; /* Change the text color to your preference */
+  color: #333; 
   font-family: Georgia, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -12,7 +12,7 @@ body {
   height: 100vh;
   width: 400px;
   margin: 0 auto;
-  background-color: #90ee90; /* Light Green - Change to your desired background color */
+  background-color: conic-gradient(at 125% 50%, #1abc9c, #f39c12, #e67e22, #9b59b6, #3498db); 
   display: flex;
   align-items: center;
   justify-content: center;
