@@ -1,4 +1,4 @@
-// script.js
+// script.js 
  
 // Function to get sunrise and sunset data using the sunrisesunset API
 function getSunriseSunsetData(latitude, longitude) {
