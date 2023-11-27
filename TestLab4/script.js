@@ -8,6 +8,26 @@ function getSunriseSunsetData(latitude, longitude) {
     method: 'GET',
     success: function (data) {
       updateDashboard(data.results);
+      // Fetch and update tomorrow's data after updating today's data
+      fetchTomorrowData(latitude, longitude);
+    },
+    error: function (error) {
+      handleApiError(error.responseJSON);
+    },
+  });
+}
+
+function fetchTomorrowData(latitude, longitude) {
+  const tomorrowDate = new Date();
+  tomorrowDate.setDate(tomorrowDate.getDate() + 1);
+
+  const tomorrowApiUrl = `https://api.sunrisesunset.io/json?lat=${latitude}&lng=${longitude}&date=${tomorrowDate.toISOString().split('T')[0]}&formatted=0`;
+
+  $.ajax({
+    url: tomorrowApiUrl,
+    method: 'GET',
+    success: function (data) {
+      updateTomorrowData(data.results);
     },
     error: function (error) {
       handleApiError(error.responseJSON);
@@ -23,23 +43,6 @@ function updateDashboard(results) {
   $('#today-day-length').text(results.day_length);
   $('#today-solar-noon').text(results.solar_noon);
   $('#timezone').text(results.timezone);
-
-  // Show tomorrow's data
-  const tomorrowDate = new Date();
-  tomorrowDate.setDate(tomorrowDate.getDate() + 1);
-
-  const tomorrowApiUrl = `https://api.sunrisesunset.io/json?lat=${results.latitude}&lng=${results.longitude}&date=${tomorrowDate.toISOString().split('T')[0]}&formatted=0`;
-
-  $.ajax({
-    url: tomorrowApiUrl,
-    method: 'GET',
-    success: function (data) {
-      updateTomorrowData(data.results);
-    },
-    error: function (error) {
-      handleApiError(error.responseJSON);
-    },
-  });
 }
 
 function updateTomorrowData(results) {
