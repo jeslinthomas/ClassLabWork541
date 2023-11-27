@@ -2,38 +2,49 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  margin: 20px;
-  padding: 20px;
-  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  background-image: url('background.jpg'); /* Replace 'background.jpg' with your image file */
+  background-size: cover;
+  background-position: center;
 }
 
 .sun-info {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.9);
   border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 15px;
+  border-radius: 10px;
+  padding: 20px;
   margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #error-message {
-  color: red;
-  margin-bottom: 10px;
+  color: #d9534f;
+  background-color: #f2dede;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
 }
 
 label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  color: #333;
 }
 
 input {
   width: 80%;
-  padding: 8px;
-  margin-bottom: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
 }
 
 button {
-  padding: 10px;
-  background-color: #4caf50;
+  padding: 15px;
+  background-color: #5bc0de;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -41,7 +52,7 @@ button {
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #46b8da;
 }
 
 /* Add your own styling for the dashboard layout */
