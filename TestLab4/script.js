@@ -1,98 +1,94 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const sunriseSunsetApiUrl = "https://api.sunrise-sunset.io/json";
-  const geocodeApiUrl = "https://geocode.maps.co/";
+// script.js
 
-  const getLocationBtn = document.getElementById("getLocation");
-  const searchLocationBtn = document.getElementById("searchLocation");
-  const locationInput = document.getElementById("locationInput");
+// Function to get sunrise and sunset data using the sunrisesunset API
+function getSunriseSunsetData(latitude, longitude) {
+  const apiUrl = `https://api.sunrisesunset.io/json?lat=${latitude}&lng=${longitude}&date=today&formatted=0`;
 
-  getLocationBtn.addEventListener("click", getCurrentLocation);
-  searchLocationBtn.addEventListener("click", searchLocation);
+  $.ajax({
+    url: apiUrl,
+    method: 'GET',
+    success: function (data) {
+      updateDashboard(data.results);
+    },
+    error: function (error) {
+      handleApiError(error.responseJSON);
+    },
+  });
+}
 
-  function getCurrentLocation() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(success, error);
-    } else {
-      alert("Geolocation is not supported by this browser.");
-    }
+// Function to update the dashboard with sunrise and sunset data
+function updateDashboard(results) {
+  // Update HTML elements with data from the API response
+  $('#today-sunrise').text(results.sunrise);
+  $('#today-sunset').text(results.sunset);
+  $('#today-dawn').text(results.civil_twilight_begin);
+  $('#today-dusk').text(results.civil_twilight_end);
+  $('#today-day-length').text(results.day_length);
+  $('#today-solar-noon').text(results.solar_noon);
+  $('#timezone').text(results.timezone);
+
+  // Show tomorrow's data (similar to today)
+  // ...
+
+  // Remove any error messages
+  $('#error-message').hide();
+}
+
+// Function to handle API errors and display an error message
+function handleApiError(error) {
+  $('#error-message').text(`Error: ${error.status} - ${error.message}`);
+  $('#error-message').show();
+
+  // Clear previous data
+  $('.sun-info').text('');
+}
+
+// Function to get geolocation and update the dashboard
+function getCurrentLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      function (position) {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        getSunriseSunsetData(latitude, longitude);
+      },
+      function (error) {
+        handleApiError({ status: error.code, message: error.message });
+      }
+    );
+  } else {
+    handleApiError({ status: 0, message: 'Geolocation is not supported by this browser.' });
   }
+}
 
-  function success(position) {
-    const { latitude, longitude } = position.coords;
-    getSunriseSunsetData(latitude, longitude);
-  }
+// Event listener for the "Search" button
+$('#search-btn').on('click', function () {
+  const locationName = $('#location-input').val();
+  if (locationName.trim() !== '') {
+    // Use the geocode API to get latitude and longitude
+    const geocodeUrl = `https://geocode.maps.co/?address=${encodeURIComponent(locationName)}`;
 
-  function error(error) {
-    console.error("Error getting current location:", error);
-    alert("Unable to retrieve your location. Please try again or use the search option.");
-  }
-
-  function searchLocation() {
-    const location = locationInput.value.trim();
-    if (location === "") {
-      alert("Please enter a location.");
-      return;
-    }
-
-    getGeocodeData(location);
-  }
-
-  function getGeocodeData(location) {
-    const geocodeUrl = `${geocodeApiUrl}?address=${encodeURIComponent(location)}`;
-
-    fetch(geocodeUrl)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`Geocode API request failed with status ${response.status}`);
-        }
-        return response.json();
-      })
-      .then((data) => {
-        console.log("Geocode API response:", data);
+    $.ajax({
+      url: geocodeUrl,
+      method: 'GET',
+      success: function (data) {
         if (data.results.length > 0) {
-          const { lat, lon } = data.results[0].geometry;
-          getSunriseSunsetData(lat, lon);
+          const latitude = data.results[0].geometry.location.lat;
+          const longitude = data.results[0].geometry.location.lng;
+          getSunriseSunsetData(latitude, longitude);
         } else {
-          alert("Location not found. Please enter a valid location.");
+          handleApiError({ status: 404, message: 'Location not found.' });
         }
-      })
-      .catch((error) => {
-        console.error("Error fetching geocode data:", error);
-        alert("An error occurred while fetching location data. Please try again.");
-      });
-  }
-
-  function getSunriseSunsetData(latitude, longitude) {
-    const sunriseSunsetUrl = `${sunriseSunsetApiUrl}?lat=${latitude}&lng=${longitude}&date=today&formatted=0`;
-
-    fetch(sunriseSunsetUrl)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`Sunrise Sunset API request failed with status ${response.status}`);
-        }
-        return response.json();
-      })
-      .then((data) => {
-        console.log("Sunrise Sunset API response:", data);
-        if (data.status === "OK") {
-          updateDashboard(data.results);
-        } else {
-          alert(`Error: ${data.status}`);
-        }
-      })
-      .catch((error) => {
-        console.error("Error fetching sunrise sunset data:", error);
-        alert("An error occurred while fetching sunrise sunset data. Please try again.");
-      });
-  }
-
-  function updateDashboard(results) {
-    // Update your dashboard HTML elements with the data from the API response
-    const todaySunrise = results.sunrise;
-    const todaySunset = results.sunset;
-    const tomorrowSunrise = results.sunrise_tomorrow;
-    const tomorrowSunset = results.sunset_tomorrow;
-
-    // Update other elements as needed
+      },
+      error: function (error) {
+        handleApiError(error.responseJSON);
+      },
+    });
+  } else {
+    // Empty input, show error
+    handleApiError({ status: 400, message: 'Please enter a location.' });
   }
 });
+
+// Initialize the dashboard with current location data
+getCurrentLocation();
