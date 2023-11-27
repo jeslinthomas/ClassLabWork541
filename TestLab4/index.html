@@ -1,29 +1,39 @@
+<!-- index.html -->
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sunrise Sunset Dashboard</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Include your CSS file -->
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <header>
-    <h1>Sunrise Sunset Dashboard</h1>
-  </header>
+  <div id="error-message"></div>
 
-  <main>
-    <div>
-      <button id="getLocation">Get Current Location</button>
-      <input type="text" id="locationInput" placeholder="Enter Location">
-      <button id="searchLocation">Search Location</button>
-    </div>
+  <div class="sun-info">
+    <h2>Today's Sun Information</h2>
+    <p>Sunrise: <span id="today-sunrise"></span></p>
+    <p>Sunset: <span id="today-sunset"></span></p>
+    <p>Dawn: <span id="today-dawn"></span></p>
+    <p>Dusk: <span id="today-dusk"></span></p>
+    <p>Day Length: <span id="today-day-length"></span></p>
+    <p>Solar Noon: <span id="today-solar-noon"></span></p>
+    <p>Timezone: <span id="timezone"></span></p>
+  </div>
 
-    <!-- Add other HTML elements for displaying sunrise/sunset data -->
-  </main>
+  <div class="sun-info">
+    <h2>Tomorrow's Sun Information</h2>
+    <!-- Add similar elements for tomorrow's data -->
+  </div>
 
-  <script src="script.js"></script> <!-- Reference your script.js file -->
+  <label for="location-input">Search Location:</label>
+  <input type="text" id="location-input" placeholder="Enter location">
+  <button id="search-btn">Search</button>
+
+  <button id="current-location-btn">Use Current Location</button>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="script.js"></script>
 </body>
-
 </html>
