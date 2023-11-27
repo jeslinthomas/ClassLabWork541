@@ -5,13 +5,20 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f0f0f0;
-  background-image: url('background.jpg'); /* Replace 'background.jpg' with your image file */
+  background-image: url('https://www.adorama.com/alc/wp-content/uploads/2015/05/stories-HRX5WXFyB64-unsplash.jpg'); /* Replace with your image URL */
   background-size: cover;
   background-position: center;
+  color: #fff;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .sun-info {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 20px;
@@ -20,39 +27,34 @@ body {
 }
 
 #error-message {
-  color: #d9534f;
-  background-color: #f2dede;
-  padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 20px;
+  color: #ff6347;
+  margin-bottom: 10px;
 }
 
 label {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   color: #333;
 }
 
 input {
-  width: 80%;
+  width: 100%;
   padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #fff;
 }
 
 button {
-  padding: 15px;
-  background-color: #5bc0de;
+  padding: 12px;
+  background-color: #4caf50;
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #46b8da;
+  background-color: #45a049;
 }
-
-/* Add your own styling for the dashboard layout */
