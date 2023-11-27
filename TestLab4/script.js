@@ -1,5 +1,5 @@
 // script.js
-
+ 
 // Function to get sunrise and sunset data using the sunrisesunset API
 function getSunriseSunsetData(latitude, longitude) {
   const apiUrl = `https://api.sunrisesunset.io/json?lat=${latitude}&lng=${longitude}&date=today&formatted=0`;
