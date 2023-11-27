@@ -1,36 +1,47 @@
+/* styles.css */
+
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-header {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 1em 0;
-}
-
-main {
-  max-width: 600px;
-  margin: 20px auto;
+  font-family: 'Arial', sans-serif;
+  margin: 20px;
   padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  background-color: #f5f5f5;
+}
+
+.sun-info {
   background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+#error-message {
+  color: red;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 80%;
+  padding: 8px;
+  margin-bottom: 10px;
 }
 
 button {
   padding: 10px;
-  margin: 5px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-input {
-  padding: 10px;
-  margin: 5px;
+button:hover {
+  background-color: #45a049;
 }
 
-/* Add additional styling for your sunrise/sunset data display here */
-
+/* Add your own styling for the dashboard layout */
