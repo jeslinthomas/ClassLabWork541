@@ -22,7 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
     getSunriseSunsetData(latitude, longitude);
   }
 
-  function error() {
+  function error(error) {
+    console.error("Error getting current location:", error);
     alert("Unable to retrieve your location. Please try again or use the search option.");
   }
 
@@ -37,15 +38,17 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function getGeocodeData(location) {
-    const geocodeApiParams = {
-      address: location
-    };
-
-    const geocodeUrl = `${geocodeApiUrl}?${new URLSearchParams(geocodeApiParams)}`;
+    const geocodeUrl = `${geocodeApiUrl}?address=${encodeURIComponent(location)}`;
 
     fetch(geocodeUrl)
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Geocode API request failed with status ${response.status}`);
+        }
+        return response.json();
+      })
       .then((data) => {
+        console.log("Geocode API response:", data);
         if (data.results.length > 0) {
           const { lat, lon } = data.results[0].geometry;
           getSunriseSunsetData(lat, lon);
@@ -60,18 +63,17 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function getSunriseSunsetData(latitude, longitude) {
-    const sunriseSunsetApiParams = {
-      lat: latitude,
-      lng: longitude,
-      date: "today",
-      formatted: 0
-    };
-
-    const sunriseSunsetUrl = `${sunriseSunsetApiUrl}?${new URLSearchParams(sunriseSunsetApiParams)}`;
+    const sunriseSunsetUrl = `${sunriseSunsetApiUrl}?lat=${latitude}&lng=${longitude}&date=today&formatted=0`;
 
     fetch(sunriseSunsetUrl)
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Sunrise Sunset API request failed with status ${response.status}`);
+        }
+        return response.json();
+      })
       .then((data) => {
+        console.log("Sunrise Sunset API response:", data);
         if (data.status === "OK") {
           updateDashboard(data.results);
         } else {
