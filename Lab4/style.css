@@ -1,0 +1,219 @@
+body {
+  
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-size: 100%;
+  background: lightgray;
+  background-image: url('https://source.unsplash.com/random/1600x900/?nature/');
+  
+}
+
+.weather_today
+{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  
+}
+.card {
+  
+  background: #000000d0;
+  color: white;
+  padding: 2em;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 400px;
+  margin: 1em;
+}
+
+.search{
+ display: flex;
+ align-items: center; 
+ justify-content: center;
+}
+
+
+button {
+    margin: 1em;
+    border-radius: 50%;
+    border: none;
+    height: 44px;
+    width: 44px;
+    outline: none;
+    background: #7c7c7c2d;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+input.search-bar {
+    background: #7c7c7c2b;
+    border: nonw;
+    border: none;
+    outline: none;
+    padding: 0.4em 1em;
+    border-radius: 24px;
+    color: white;
+    font-family: inherit;
+    font-size: 105%;
+    width: calc(100%-100px);
+}
+
+button:hover {
+    background: #7c7c7c6b;
+}
+
+
+.separator{
+  height: 1px;
+  width: 250px;
+  margin: 25px;
+  margin-left: 40px;
+
+  background: #ccc;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.separator::before{
+  content: "or";
+  color: #b3b3b3;
+  font-size: 19px;
+  padding: 0 15px;
+  background: #000000d0;
+}
+
+.geolocation
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.locationbtn{
+  cursor: pointer;
+  background: #43AFFC;
+  transition: 0.3s ease;
+  width: 200px;
+  border-radius: 5px;
+  background: #000000d0;
+  color: white;
+}
+.input-part button:hover{
+  background: #1d9ffc;
+}
+
+
+.description {
+  text-transform: capitalize;
+  margin-left: 8px;
+
+}
+
+.humidity{
+  margin-bottom: 5px;
+}
+
+h1.temp {
+  margin: 0;
+  margin-bottom: 0.35em;
+}
+
+.icon{
+  max-width: 30%;
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+}
+
+.weather_forecast{
+  /*
+display: flex;
+flex-wrap: wrap;
+margin: 0 60px;
+gap: 20px;
+text-align: center;
+justify-content: space-between;
+
+align-items: center;
+*/
+
+display: grid;
+
+
+grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+grid-gap: 20px;
+text-align: center;
+margin-right: 40px;
+margin-left: 40px;
+margin-top: 50px;
+
+}
+
+.weather_forecast_icon{
+  max-width: 50%;
+}
+
+.weather_forecast_item{
+  /*
+  padding: 10px;
+  background: #000000d0;
+  /*background-color: rgba(255, 255, 255, 0.2);*/
+  /*
+  color: white;
+  border-radius: 10px;
+  min-width: 100px; 
+  margin-top: 20px;
+  margin-bottom: 10px;
+  flex-grow: 1;
+  */
+  background: #000000d0;  
+  color: white;
+  border-radius: 10px;
+
+}
+
+.weather.loading {
+  visibility: hidden;
+  max-height: 20px;
+  position: relative;
+}
+
+.weather.loading:after {
+  visibility: visible;
+  content: "Loading...";
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
+
+
+
+
+@media all and (max-width: 600px) and (min-width: 320px){
+  body{
+    
+    background-image: url('Images/weather-mobile.jpg');
+  }
+
+  .card {
+  
+    background: #000000d0;
+    color: white;
+    padding: 2em;
+    border-radius: 30px;
+    width: 50%;
+    max-width: 400px;
+    margin: 1em;
+  }
+  
+  
+  }
