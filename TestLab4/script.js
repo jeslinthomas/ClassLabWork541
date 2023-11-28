@@ -1,4 +1,4 @@
-// Event listener for using geolocation 
+// Event listener for using geolocation
 document.getElementById('geoLocation').addEventListener('click', function() {
     resetInputs();
     if (navigator.geolocation) {
