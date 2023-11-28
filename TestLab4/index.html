@@ -1,39 +1,47 @@
-<!-- index.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sunrise Sunset Dashboard</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sunrise and Sunset API Dashboard </title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="error-message"></div>
+    <div class="container">
+        <div class="header">
+            <h1> Sunrise and Sunset API Dashboard </h1>
+            <img src="new-icon.png" alt="Icon" class="header-icon">
+        </div>
+        <p id="instructionMessage"> Choose your current location, pick a default from the list, or manually input a location.</p>
+        
+        <!-- Search Bar Section -->
+        <div class="search-bar">
+            <button id="geoLocation">Use My Location</button>
+            <select id="presetLocations">
+                <option value="">Select a Location</option>
+                <option value="48.856613,2.352222">Paris, France</option>
+                <option value="55.755825,37.617635">Moscow, Russia</option>
+                <option value="-33.868820,151.209296">Sydney, Australia</option>
+                <option value="55.676098,12.568337">Copenhagen, Denmark</option>
+                <option value="40.416775,-3.703790">Madrid, Spain</option>
+            </select>
+            <input type="text" id="searchLocation" placeholder="Search Location">
+            <button id="searchButton">Search</button>
+        </div>
 
-  <div class="sun-info">
-    <h2>Today's Sun Information</h2>
-    <p>Sunrise: <span id="today-sunrise"></span></p>
-    <p>Sunset: <span id="today-sunset"></span></p>
-    <p>Dawn: <span id="today-dawn"></span></p>
-    <p>Dusk: <span id="today-dusk"></span></p>
-    <p>Day Length: <span id="today-day-length"></span></p>
-    <p>Solar Noon: <span id="today-solar-noon"></span></p>
-    <p>Timezone: <span id="timezone"></span></p>
-  </div>
+        <div id="dataDisplay">
+            <div id="todayData" class="data-column"></div>
+            <div id="tomorrowData" class="data-column"></div>
+        </div>
+    </div>
 
-  <div class="sun-info">
-    <h2>Tomorrow's Sun Information</h2>
-    <!-- Add similar elements for tomorrow's data -->
-  </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© Jeslin Varughese </p>
+            <p>Powered by <a href="https://SunriseSunset.io" target="_blank">SunriseSunset.io</a> and <a href="https://geocode.maps.co/" target="_blank">geocode.maps.co</a></p>
+        </div>
+    </footer>
 
-  <label for="location-input">Search Location:</label>
-  <input type="text" id="location-input" placeholder="Enter location">
-  <button id="search-btn">Search</button>
-
-  <button id="current-location-btn">Use Current Location</button>
-
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
