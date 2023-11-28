@@ -3,41 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Sunrise and Sunset Information </title>
-    <link rel="stylesheet" href="style.css">
+    <title> Sunrise and Sunset API Dashboard </title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="main-container">
-        <div class="page-header">
-            <h1> Sunrise and Sunset Information </h1>
-            <img src="new-icon.png" alt="New Icon" class="header-icon">
+    <div class="container">
+        <div class="header">
+            <h1> Sunrise and Sunset API Dashboard </h1>
+            <img src="icon.png" alt="Icon" class="header-icon">
         </div>
-        <p id="info-message"> Explore sunrise and sunset times for your location or choose from predefined options.</p>
+        <p id="instructionMessage"> Choose your current location, pick a default from the list, or manually input a location.</p>
         
-        <!-- Redesigned Search Bar Section -->
-        <div class="search-section">
-            <button id="useMyLocationBtn">Get My Location</button>
-            <select id="locationSelect">
-                <option value="">Select Location</option>
-                <option value="48.856613,2.352222">Paris, France</option>
-                <option value="55.755825,37.617635">Moscow, Russia</option>
-                <option value="-33.868820,151.209296">Sydney, Australia</option>
-                <option value="55.676098,12.568337">Copenhagen, Denmark</option>
-                <option value="40.416775,-3.703790">Madrid, Spain</option>
+        <!-- Search Bar Section -->
+        <div class="search-bar">
+            <button id="geoLocation">Use My Location</button>
+            <select id="presetLocations">
+                <option value="">Select a Location</option>
+                <option value="38.907192,-77.036873">Washington DC, USA</option>
+                <option value="34.052235,-118.243683">Los Angeles, USA</option>
+                <option value="40.712776,-74.005974">New York, USA</option>
+                <option value="51.507351,-0.127758">London, UK</option>
+                <option value="35.689487,139.691711">Tokyo, Japan</option>
             </select>
-            <input type="text" id="locationSearchInput" placeholder="Search Location">
-            <button id="searchLocationBtn">Search</button>
+            <input type="text" id="searchLocation" placeholder="Search Location">
+            <button id="searchButton">Search</button>
         </div>
 
-        <div id="displayData">
-            <div id="todayInfo" class="info-column"></div>
-            <div id="tomorrowInfo" class="info-column"></div>
+        <div id="dataDisplay">
+            <div id="todayData" class="data-column"></div>
+            <div id="tomorrowData" class="data-column"></div>
         </div>
     </div>
 
-    <footer class="page-footer">
+    <footer class="footer">
         <div class="footer-content">
-            <p>© Jeslin Varughese </p>
+            <p>© Developed by N-Kamath </p>
             <p>Powered by <a href="https://SunriseSunset.io" target="_blank">SunriseSunset.io</a> and <a href="https://geocode.maps.co/" target="_blank">geocode.maps.co</a></p>
         </div>
     </footer>
