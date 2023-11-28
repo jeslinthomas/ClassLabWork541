@@ -3,38 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sunrise Sunset Info</title>
+    <title>Sunrise Sunset Dashboard</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Sunrise Sunset Info</h1>
-            <img src="sunrise_logo.jpg" alt="Header Icon" class="header-icon">
-        </div>
-        <p id="instructionMessage">Instruction message goes here.</p>
-        <div class="search-bar">
+
+    <header>
+        <h1>Sunrise Sunset Dashboard</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Options</h2>
+            <button id="geoLocation">Get Current Location</button>
             <select id="presetLocations">
-                <option value="48.856613,2.352222">Paris, France</option>
-                <option value="55.755825,37.617635">Moscow, Russia</option>
-                <option value="-33.868820,151.209296">Sydney, Australia</option>
-                <option value="55.676098,12.568337">Copenhagen, Denmark</option>
-                <option value="40.416775,-3.703790">Madrid, Spain</option>
+                <option value="">Select a Location</option>
+                <!-- Add your predefined locations as options here -->
             </select>
-            <input type="text" id="searchLocation" placeholder="Enter a location">
+            <input type="text" id="searchLocation" placeholder="Enter Location">
             <button id="searchButton">Search</button>
-        </div>
-        <div id="dataDisplay">
-            <div id="todayData" class="data-column"></div>
-            <div id="tomorrowData" class="data-column"></div>
-        </div>
-    </div>
-    <div class="footer">
-        <div class="footer-content">
-            <p>Footer content goes here.</p>
-            <a href="https://example.com">Learn more</a>
-        </div>
-    </div>
+        </section>
+
+        <section>
+            <h2>Results</h2>
+            <div id="todayData" class="sun-info">
+                <!-- Today's data will be displayed here -->
+            </div>
+            <div id="tomorrowData" class="sun-info">
+                <!-- Tomorrow's data will be displayed here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Powered by <a href="https://sunrisesunset.io/api/" target="_blank">Sunrise Sunset API</a> and <a href="https://geocode.maps.co/" target="_blank">Geocode API</a></p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
