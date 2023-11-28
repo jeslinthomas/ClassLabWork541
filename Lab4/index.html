@@ -1,130 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather Report</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <script src="script.js" defer></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sunrise and Sunset Information </title>
+    <link rel="stylesheet" href="new-styles.css">
 </head>
 <body>
-  <div class="weather_today">
-    <div class="card">
-     <div class="search">
-      <input type="text" class="search-bar" placeholder="Search">
-      <button><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg"><path d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0 0 11.6 0l43.6-43.5a8.2 8.2 0 0 0 0-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z"></path></svg></button>
-      <p class="error"></p>
-    </div>
-    <div class="separator"></div>
-    <div class="geolocation">
-      <button type="button" class="locationbtn">Get Device Location</button>
-    </div>
-    <div class="weather loading">
-      <h2 class="city">Weather in Denver</h2>
-      <h1 class="temp">51°C</h1>
-      <div class="flex">
-      <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="" class="icon">
-      <div class="description">Cloudy</div>
-      </div>
-      <div class="humidity">Humidity: 60%</div>
-      <div class="wind">Wind Speed: 15km/h</div>
-    </div>
-
-    </div>
-  </div>
-
-  <div class="weather_forecast">
-      <article class="weather_forecast_item">
-        
-       <h3 class="weather_forecast_day1">Day1</h3>
-       <div class="innerflex">
-        <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="" class="weather_forecast_icon1">
-        <div class="description1">Sunny</div>
+    <div class="main-container">
+        <div class="page-header">
+            <h1> Sunrise and Sunset Information </h1>
+            <img src="new-icon.png" alt="New Icon" class="header-icon">
         </div>
-        <p class="weather_forecast_maxtemp"> <span class="day1max">+25</span>°C</p>
-        <p class="weather_forecast_mintemp"> <span class="day1min">-25</span>°C</p>
+        <p id="info-message"> Explore sunrise and sunset times for your location or choose from predefined options.</p>
+        
+        <!-- Redesigned Search Bar Section -->
+        <div class="search-section">
+            <button id="useMyLocationBtn">Get My Location</button>
+            <select id="locationSelect">
+                <option value="">Select Location</option>
+                <option value="38.907192,-77.036873">Washington DC, USA</option>
+                <option value="34.052235,-118.243683">Los Angeles, USA</option>
+                <option value="40.712776,-74.005974">New York, USA</option>
+                <option value="51.507351,-0.127758">London, UK</option>
+                <option value="35.689487,139.691711">Tokyo, Japan</option>
+            </select>
+            <input type="text" id="locationSearchInput" placeholder="Search Location">
+            <button id="searchLocationBtn">Search</button>
+        </div>
 
+        <div id="displayData">
+            <div id="todayInfo" class="info-column"></div>
+            <div id="tomorrowInfo" class="info-column"></div>
+        </div>
+    </div>
 
-      </article>
-      <article class="weather_forecast_item">
-        
-        <h3 class="weather_forecast_day2">Day2</h3>
-        <div class="innerflex">
-         <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="" class="weather_forecast_icon2">
-         <div class="description2">Sunny</div>
-         </div>
-         <p class="weather_forecast_maxtemp"> <span class="day2max">+25</span>°C</p>
-         <p class="weather_forecast_mintemp"> <span class="day2min">-25</span>°C</p>
- 
- 
-       </article>
-       <article class="weather_forecast_item">
-        
-        <h3 class="weather_forecast_day3">Day3</h3>
-        <div class="innerflex">
-         <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="" class="weather_forecast_icon3">
-         <div class="description3">Sunny</div>
-         </div>
-         <p class="weather_forecast_maxtemp"> <span class="day3max">+25</span>°C</p>
-         <p class="weather_forecast_mintemp"> <span class="day3min">-25</span>°C</p>
- 
- 
-       </article>
-       <article class="weather_forecast_item">
-        
-        <h3 class="weather_forecast_day4">Day4</h3>
-        <div class="innerflex">
-         <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="" class="weather_forecast_icon4">
-         <div class="description4">Sunny</div>
-         </div>
-         <p class="weather_forecast_maxtemp"> <span class="day4max">+25</span>°C</p>
-         <p class="weather_forecast_mintemp"> <span class="day4min">-25</span>°C</p>
- 
- 
-       </article>
-       <article class="weather_forecast_item">
-        
-        <h3 class="weather_forecast_day5">Day5</h3>
-        <div class="innerflex">
-         <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="" class="weather_forecast_icon5">
-         <div class="description5">Sunny</div>
-         </div>
-         <p class="weather_forecast_maxtemp"> <span class="day5max">+25</span>°C</p>
-         <p class="weather_forecast_mintemp"> <span class="day5min">-25</span>°C</p>
- 
- 
-       </article>
-       <article class="weather_forecast_item">
-        
-        <h3 class="weather_forecast_day6">Day6</h3>
-        <div class="innerflex">
-         <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="" class="weather_forecast_icon6">
-         <div class="description6">Sunny</div>
-         </div>
-         <p class="weather_forecast_maxtemp"> <span class="day6max">+25</span>°C</p>
-         <p class="weather_forecast_mintemp"> <span class="day6min">-25</span>°C</p>
- 
- 
-       </article>
-       <article class="weather_forecast_item">
-        
-        <h3 class="weather_forecast_day7">Day7</h3>
-        <div class="innerflex">
-         <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="" class="weather_forecast_icon7">
-         <div class="description7">Sunny</div>
-         </div>
-         <p class="weather_forecast_maxtemp"> <span class="day7max">+25</span>°C</p>
-         <p class="weather_forecast_mintemp"> <span class="day7min">-25</span>°C</p>
- 
- 
-       </article>
-  </div>
+    <footer class="page-footer">
+        <div class="footer-content">
+            <p>© Jeslin Varughese </p>
+            <p>Powered by <a href="https://SunriseSunset.io" target="_blank">SunriseSunset.io</a> and <a href="https://geocode.maps.co/" target="_blank">geocode.maps.co</a></p>
+        </div>
+    </footer>
 
-    
+    <script src="new-script.js"></script>
 </body>
 </html>
