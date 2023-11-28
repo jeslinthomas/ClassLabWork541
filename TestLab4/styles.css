@@ -2,7 +2,8 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background: url('https://www.adorama.com/alc/wp-content/uploads/2015/05/stories-HRX5WXFyB64-unsplash.jpg') center center fixed;
+    background-size: cover;
 }
 
 header, main, footer {
@@ -11,17 +12,12 @@ header, main, footer {
     padding: 20px;
 }
 
-
 header {
     background-color: #e74c3c; /* Change accent color to orange */
     color: #fff;
     text-align: center;
     padding: 30px;
     border-radius: 5px 5px 0 0;
-    position: relative;
-    background-image: url('Sunrise.jpg'); /* Replace 'your-background-image.jpg' with your image file */
-    background-size: cover;
-    background-position: center;
 }
 
 h1 {
@@ -37,7 +33,7 @@ h1 {
 }
 
 main {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.9); /* White background with transparency */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
 }
