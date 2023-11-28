@@ -1,9 +1,9 @@
-// Event listener for utilizing geolocation
+// Event listener for using geolocation
 document.getElementById('geoLocation').addEventListener('click', function() {
     resetInputs();
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
-            fetchSunriseSunsetInfo(position.coords.latitude, position.coords.longitude);
+            getSunriseSunsetInfo(position.coords.latitude, position.coords.longitude);
         }, function(error) {
             alert("Error in Geolocation: " + error.message);
         });
@@ -15,9 +15,9 @@ document.getElementById('geoLocation').addEventListener('click', function() {
 // Event listener for selecting a predefined location
 document.getElementById('presetLocations').addEventListener('change', function() {
     resetInputs('select');
-    const coordinates = this.value.split(',');
-    if (coordinates.length === 2) {
-        fetchSunriseSunsetInfo(coordinates[0], coordinates[1]);
+    const coords = this.value.split(',');
+    if (coords.length === 2) {
+        getSunriseSunsetInfo(coords[0], coords[1]);
     }
 });
 
@@ -28,13 +28,13 @@ document.getElementById('searchLocation').addEventListener('input', function() {
 
 // Event listener for searching a location
 document.getElementById('searchButton').addEventListener('click', function() {
-    const locationValue = document.getElementById('searchLocation').value;
-    if (locationValue) {
-        fetch(`https://geocode.maps.co/search?q=${encodeURIComponent(locationValue)}`)
+    const location = document.getElementById('searchLocation').value;
+    if (location) {
+        fetch(`https://geocode.maps.co/search?q=${encodeURIComponent(location)}`)
             .then(response => response.json())
-            .then(locationData => {
-                if (locationData && locationData.length > 0) {
-                    fetchSunriseSunsetInfo(locationData[0].lat, locationData[0].lon);
+            .then(data => {
+                if (data && data.length > 0) {
+                    getSunriseSunsetInfo(data[0].lat, data[0].lon);
                 } else {
                     alert("Location not found.");
                 }
@@ -56,7 +56,7 @@ function resetInputs(triggeredBy = '') {
 }
 
 // Function to fetch sunrise and sunset info
-function fetchSunriseSunsetInfo(latitude, longitude) {
+function getSunriseSunsetInfo(latitude, longitude) {
     // Fetch data for today
     fetchSunriseSunsetData(latitude, longitude, 'today')
         .then(dataToday => {
