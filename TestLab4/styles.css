@@ -12,16 +12,27 @@ header, main, footer {
 }
 
 header {
-    background-color: #3498db;
+    background-color: #e74c3c; /* Change accent color to orange */
     color: #fff;
     text-align: center;
     padding: 30px;
     border-radius: 5px 5px 0 0;
+    position: relative;
+    background-image: url('your-background-image.jpg'); /* Replace 'your-background-image.jpg' with your image file */
+    background-size: cover;
+    background-position: center;
 }
 
 h1 {
     margin: 0;
     font-size: 36px;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    max-width: 100px;
 }
 
 main {
@@ -44,7 +55,7 @@ button, select, input[type="text"], #searchButton {
 }
 
 button, #geoLocation {
-    background-color: #3498db;
+    background-color: #e74c3c; /* Change accent color to orange */
     color: #fff;
 }
 
@@ -57,7 +68,7 @@ input[type="text"] {
 }
 
 #searchButton {
-    background-color: #27ae60;
+    background-color: #f39c12; /* Change accent color to orange */
     color: #fff;
 }
 
@@ -76,7 +87,7 @@ footer {
 }
 
 a {
-    color: #3498db;
+    color: #e74c3c; /* Change accent color to orange */
     text-decoration: none;
 }
 
