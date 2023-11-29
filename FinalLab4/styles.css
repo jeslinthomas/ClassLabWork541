@@ -106,3 +106,35 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+/* Media query for screens 600px or smaller */
+@media screen and (max-width: 600px) {
+    header {
+        padding: 30px 10px 10px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .logo {
+        max-width: 60px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    button, select, input[type="text"], #searchButton {
+        padding: 10px;
+        margin: 5px;
+    }
+
+    select {
+        width: 100%;
+    }
+
+    input[type="text"] {
+        width: 100%;
+    }
+}
