@@ -6,7 +6,7 @@ body {
     background-size: cover;
     background-position: center;
     opacity: 0;
-    transition: opacity 1.5s ease-in-out;
+    transition: opacity 1s ease-in-out;
 }
 
 header {
@@ -16,7 +16,7 @@ header {
     padding: 50px 20px 20px;
     border-radius: 5px 5px 0 0;
     position: relative;
-    transition: padding 0.3s ease-in-out, opacity 1.5s ease-in-out;
+    transition: padding 0.3s ease-in-out, opacity 1s ease-in-out;
 }
 
 .header-background {
@@ -41,8 +41,8 @@ h1 {
 }
 
 .logo {
-    max-width: 160px;
-    transition: transform 1.0s ease-in-out;
+    max-width: 120px;
+    transition: transform 0.3s ease-in-out;
 }
 
 /* Add a hover effect for the header on hover */
@@ -89,7 +89,7 @@ input[type="text"],
     background-color: #e74c3c;
     color: #fff;
     font-size: 16px;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 /* Add hover effects for buttons, select, and input */
@@ -98,6 +98,7 @@ select:hover,
 input[type="text"]:hover,
 #searchButton:hover {
     background-color: #c0392b;
+    transform: scale(1.1);
 }
 
 .logo-below-button {
