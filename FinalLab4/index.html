@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sunrise Sunset Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-Gn5386P1+EkNHD6TCDSJF+npb3PQOt0mGOF1g+uqGhARvFYzF9KnphD+Vi6C+6D3DzJAIWxQyB0FHCsLxs3tJw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -20,19 +20,21 @@
     <main>
         <section>
             <h2>What do you wish to do?</h2>
-            <div class="options-container">
-                <button id="geoLocation">Get Current Location</button>
-                <select id="presetLocations">
-                    <option value="">Select a Location</option>
-                    <option value="48.856613,2.352222">Paris, France</option>
-                    <option value="55.755825,37.617635">Moscow, Russia</option>
-                    <option value="-33.868820,151.209296">Sydney, Australia</option>
-                    <option value="55.676098,12.568337">Copenhagen, Denmark</option>
-                    <option value="40.416775,-3.703790">Madrid, Spain</option>
-                </select>
-                <input type="text" id="searchLocation" placeholder="Enter Location">
-                <button id="searchButton">Search</button>
-            </div>
+            <button id="geoLocation">
+                <i class="fas fa-map-marker-alt"></i> Get Current Location
+            </button>
+            <select id="presetLocations">
+                <option value="">Select a Location</option>
+                <option value="48.856613,2.352222">Paris, France</option>
+                <option value="55.755825,37.617635">Moscow, Russia</option>
+                <option value="-33.868820,151.209296">Sydney, Australia</option>
+                <option value="55.676098,12.568337">Copenhagen, Denmark</option>
+                <option value="40.416775,-3.703790">Madrid, Spain</option>
+            </select>
+            <input type="text" id="searchLocation" placeholder="Enter Location">
+            <button id="searchButton">
+                <i class="fas fa-search"></i> Search
+            </button>
         </section>
 
         <section>
