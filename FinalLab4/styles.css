@@ -5,6 +5,8 @@ body {
     background-image: url('https://www.adorama.com/alc/wp-content/uploads/2015/05/stories-HRX5WXFyB64-unsplash.jpg');
     background-size: cover;
     background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
 header {
@@ -14,6 +16,7 @@ header {
     padding: 50px 20px 20px;
     border-radius: 5px 5px 0 0;
     position: relative;
+    transition: padding 0.3s ease-in-out;
 }
 
 .header-background {
@@ -46,6 +49,7 @@ main {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     padding: 20px;
+    transition: opacity 0.5s ease-in-out;
 }
 
 section {
@@ -64,11 +68,17 @@ button, select, input[type="text"], #searchButton {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
 button, #geoLocation {
     background-color: #e74c3c;
     color: #fff;
+}
+
+button:hover, #geoLocation:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
 }
 
 select {
@@ -77,11 +87,22 @@ select {
 
 input[type="text"] {
     width: 300px;
+    transition: border-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+select:hover, input[type="text"]:hover {
+    border-color: #3498db;
+    transform: scale(1.02);
 }
 
 #searchButton {
     background-color: #f39c12;
     color: #fff;
+}
+
+#searchButton:hover {
+    background-color: #d35400;
+    transform: scale(1.05);
 }
 
 .sun-info {
@@ -137,4 +158,9 @@ a:hover {
     input[type="text"] {
         width: 100%;
     }
+}
+
+/* Fade-in effect on page load */
+body.loaded {
+    opacity: 1;
 }
