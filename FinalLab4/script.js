@@ -1,10 +1,16 @@
-// Event listener for using geolocation 
-document.getElementById('geoLocation').addEventListener('click', function() {
+// Add an event listener to the window's load event
+window.addEventListener('load', function () {
+    // Add the 'loaded' class to the body
+    document.body.classList.add('loaded');
+});
+
+// Event listener for using geolocation
+document.getElementById('geoLocation').addEventListener('click', function () {
     resetInputs();
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
+        navigator.geolocation.getCurrentPosition(function (position) {
             getSunriseSunsetInfo(position.coords.latitude, position.coords.longitude);
-        }, function(error) {
+        }, function (error) {
             alert("Error in Geolocation: " + error.message);
         });
     } else {
@@ -13,7 +19,7 @@ document.getElementById('geoLocation').addEventListener('click', function() {
 });
 
 // Event listener for selecting a predefined location
-document.getElementById('presetLocations').addEventListener('change', function() {
+document.getElementById('presetLocations').addEventListener('change', function () {
     resetInputs('select');
     const coords = this.value.split(',');
     if (coords.length === 2) {
@@ -22,12 +28,12 @@ document.getElementById('presetLocations').addEventListener('change', function()
 });
 
 // Event listener for the search location input
-document.getElementById('searchLocation').addEventListener('input', function() {
+document.getElementById('searchLocation').addEventListener('input', function () {
     resetInputs('input'); // Reset other inputs
 });
 
 // Event listener for searching a location
-document.getElementById('searchButton').addEventListener('click', function() {
+document.getElementById('searchButton').addEventListener('click', function () {
     const location = document.getElementById('searchLocation').value;
     if (location) {
         fetch(`https://geocode.maps.co/search?q=${encodeURIComponent(location)}`)
@@ -94,7 +100,7 @@ function formatUTCOffset(offsetMinutes) {
 function updateDisplay(dataToday, dataTomorrow) {
     const todayData = document.getElementById('todayData');
     const tomorrowData = document.getElementById('tomorrowData');
-    
+
     todayData.innerHTML = `
         <strong>Today:</strong>
         <div>Sunrise: ${dataToday.sunrise}</div>
