@@ -42,7 +42,7 @@ h1 {
 
 .logo {
     max-width: 160px;
-    transition: transform 1.5s ease-in-out;
+    transition: transform 1.0s ease-in-out;
 }
 
 /* Add a hover effect for the header on hover */
@@ -72,6 +72,24 @@ main {
 .option-container {
     text-align: center;
     margin: 10px;
+}
+
+/* Update button styles for better appearance */
+button,
+select,
+input[type="text"],
+#searchButton {
+    padding: 15px 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    position: relative;
+    background-color: #e74c3c;
+    color: #fff;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
 }
 
 /* Add hover effects for buttons, select, and input */
