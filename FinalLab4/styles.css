@@ -6,7 +6,7 @@ body {
     background-size: cover;
     background-position: center;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 1s ease-in-out;
 }
 
 header {
@@ -16,7 +16,7 @@ header {
     padding: 50px 20px 20px;
     border-radius: 5px 5px 0 0;
     position: relative;
-    transition: padding 0.3s ease-in-out;
+    transition: padding 0.3s ease-in-out, opacity 1s ease-in-out;
 }
 
 .header-background {
