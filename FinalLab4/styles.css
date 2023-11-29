@@ -68,11 +68,14 @@ select,
 input[type="text"],
 #searchButton {
     padding: 12px;
+    margin-right: 10px;
     margin-bottom: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     position: relative;
+    background-color: #e74c3c; /* Retain the button color */
+    color: #fff;
 }
 
 .logo-below-button {
