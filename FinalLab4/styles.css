@@ -42,6 +42,17 @@ h1 {
 
 .logo {
     max-width: 160px;
+    transition: transform 1.5s ease-in-out;
+}
+
+/* Add a hover effect for the header on hover */
+header:hover {
+    padding: 50px 20px 20px;
+}
+
+/* Add a hover effect for the logo on hover */
+.logo:hover {
+    transform: scale(1.2);
 }
 
 main {
@@ -63,19 +74,12 @@ main {
     margin: 10px;
 }
 
-button,
-select,
-input[type="text"],
-#searchButton {
-    padding: 12px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    position: relative;
-    background-color: #e74c3c; /* Retain the button color */
-    color: #fff;
+/* Add hover effects for buttons, select, and input */
+button:hover,
+select:hover,
+input[type="text"]:hover,
+#searchButton:hover {
+    background-color: #c0392b;
 }
 
 .logo-below-button {
@@ -87,6 +91,12 @@ input[type="text"],
     transform: translateY(-50%);
     background-size: contain;
     background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Add hover effect for the logo below the buttons */
+.logo-below-button:hover {
+    transform: scale(1.2);
 }
 
 .sun-info {
@@ -95,6 +105,12 @@ input[type="text"],
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Add hover effect for sun-info sections */
+.sun-info:hover {
+    background-color: #d2d7db;
 }
 
 footer {
@@ -108,6 +124,7 @@ a {
     text-decoration: none;
 }
 
+/* Add hover effect for the footer link */
 a:hover {
     text-decoration: underline;
 }
