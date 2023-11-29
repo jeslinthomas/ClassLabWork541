@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunrise Sunset Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <img src="Sunrise.jpg" alt="Header Background" class="header-background">
+        <div class="header-content">
+            <img src="sunrise_logo.jpg" alt="Logo" class="logo">
+            <h1>Sunrise Sunset Dashboard</h1>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>What do you wish to do?</h2>
+            <div class="options-container">
+                <button id="geoLocation">Get Current Location</button>
+                <select id="presetLocations">
+                    <option value="">Select a Location</option>
+                    <option value="48.856613,2.352222">Paris, France</option>
+                    <option value="55.755825,37.617635">Moscow, Russia</option>
+                    <option value="-33.868820,151.209296">Sydney, Australia</option>
+                    <option value="55.676098,12.568337">Copenhagen, Denmark</option>
+                    <option value="40.416775,-3.703790">Madrid, Spain</option>
+                </select>
+                <input type="text" id="searchLocation" placeholder="Enter Location">
+                <button id="searchButton">Search</button>
+            </div>
+        </section>
+
+        <section>
+            <h2>Results</h2>
+            <div id="todayData" class="sun-info">
+                <!-- Today's data will be displayed here -->
+            </div>
+            <div id="tomorrowData" class="sun-info">
+                <!-- Tomorrow's data will be displayed here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Powered by <a href="https://sunrisesunset.io/api/" target="_blank">Sunrise Sunset API</a> and <a href="https://geocode.maps.co/" target="_blank">Geocode API</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
