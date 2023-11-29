@@ -49,11 +49,7 @@ main {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     padding: 20px;
-    transition: opacity 0.5s ease-in-out;
-}
-
-section {
-    margin-bottom: 30px;
+    transition: opacity 1s ease-in-out;
 }
 
 .options-container {
@@ -62,47 +58,29 @@ section {
     justify-content: center;
 }
 
-button, select, input[type="text"], #searchButton {
-    padding: 12px;
+.option-container {
+    text-align: center;
     margin: 10px;
+}
+
+button,
+select,
+input[type="text"],
+#searchButton {
+    padding: 12px;
+    margin-bottom: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    position: relative;
 }
 
-button, #geoLocation {
-    background-color: #e74c3c;
-    color: #fff;
-}
-
-button:hover, #geoLocation:hover {
-    background-color: #c0392b;
-    transform: scale(1.05);
-}
-
-select {
-    width: 200px;
-}
-
-input[type="text"] {
-    width: 300px;
-    transition: border-color 0.3s ease-in-out, transform 0.2s ease-in-out;
-}
-
-select:hover, input[type="text"]:hover {
-    border-color: #3498db;
-    transform: scale(1.02);
-}
-
-#searchButton {
-    background-color: #f39c12;
-    color: #fff;
-}
-
-#searchButton:hover {
-    background-color: #d35400;
-    transform: scale(1.05);
+.logo-below-button {
+    width: 30px;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .sun-info {
@@ -126,38 +104,6 @@ a {
 
 a:hover {
     text-decoration: underline;
-}
-
-/* Media query for screens 600px or smaller */
-@media screen and (max-width: 600px) {
-    header {
-        padding: 30px 10px 10px;
-    }
-
-    h1 {
-        font-size: 28px;
-    }
-
-    .logo {
-        max-width: 60px;
-    }
-
-    main {
-        padding: 10px;
-    }
-
-    button, select, input[type="text"], #searchButton {
-        padding: 10px;
-        margin: 5px;
-    }
-
-    select {
-        width: 100%;
-    }
-
-    input[type="text"] {
-        width: 100%;
-    }
 }
 
 /* Fade-in effect on page load */
