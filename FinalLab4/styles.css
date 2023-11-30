@@ -86,7 +86,7 @@ input[type="text"],
     border-radius: 25px;
     cursor: pointer;
     position: relative;
-    background-color: #e74c3c;
+    background-color: #ffcc33;
     color: #fff;
     font-size: 16px;
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
@@ -97,7 +97,7 @@ button:hover,
 select:hover,
 input[type="text"]:hover,
 #searchButton:hover {
-    background-color: #c0392b;
+    background-color: #da9100;
     transform: scale(1.1);
 }
 
